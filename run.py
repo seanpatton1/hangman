@@ -2,15 +2,17 @@ import random
 from words import words
 
 def get_word():
+    """gets random words from imported list and returns it as uppercase"""
     word = random.choice(words)
     return word.upper()
 
 def play(word):
+    """ This section holds structure of the game with nested if statements within while loop"""
     word_completion = '_' * len(word)
     guessed = False
-    guessed_letters = []
-    guessed_words = []
-    tries = 6
+    guessed_letters = [] # creates empty list for guessed characters
+    guessed_words = [] # creates empty list for guessed words
+    tries = 6 # number of tries for user which relates to hangman image
     print("Let's play hangman")
     print(display_hangman(tries))
     print(word_completion)
