@@ -56,3 +56,73 @@ def play(word):
         print("Congrats, you guessed the word! You win!")
     else:
         print("Sorry, you ran out of tries. The word was" + word + ". Maybe next time!")
+        
+def display_hangman(tries):
+    """ 
+    reveals the hangman based on the number of tries
+    
+    """
+    stages = [  """
+            --------
+            |      |
+            |      o
+            |     \\|/
+            |      |
+            |     / \\
+            ---
+            """,
+        """
+            --------
+            |      |
+            |      o
+            |     \\|/
+            |      |
+            |     /
+            ---
+            """,
+        """
+            --------
+            |      |
+            |      o
+            |     \\|/
+            |      |
+            |
+            ---
+            """,
+        """
+            --------
+            |      |
+            |      o
+            |     \\|
+            |      |
+            |
+            ---
+            """,
+        """
+            --------
+            |      |
+            |      o
+            |      |
+            |      |
+            |
+            ---
+            """,
+        """
+            --------
+            |      |
+            |      o
+            |
+            |
+            |
+            ---
+            """,
+        """
+            --------
+            |      |
+            |
+            |
+            |
+            |
+            ---
+            """,
+    ]
