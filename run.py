@@ -1,6 +1,12 @@
 import random
 from words import words
 
+def welcome_message(tries, word_completion):
+    print("Let's play hangman")
+    print(display_hangman(tries))
+    print(word_completion)
+    print("\n")
+
 def get_word():
     """gets random words from imported list and returns it as uppercase"""
     word = random.choice(words)
@@ -13,10 +19,9 @@ def play(word):
     guessed_letters = [] # creates empty list for guessed characters
     guessed_words = [] # creates empty list for guessed words
     tries = 6 # number of tries for user which relates to hangman image
-    print("Let's play hangman")
-    print(display_hangman(tries))
-    print(word_completion)
-    print("\n")
+    
+    welcome_message(tries, word_completion) # Call welcome message at start of game
+    
     while not guessed and tries > 0:
         guess = input("Please guess a letter or word: ").upper()
         if len(guess) == 1 and guess.isalpha():
