@@ -152,10 +152,12 @@ def display_hangman(tries):
     
 
 def main():
-    word = get_word()
+    difficulty = choose_difficulty()
+    word = get_word(difficulty)
     play(word)
     while input("Play Again? (Y/N)").upper() == "Y":
-        word = get_word()
+        difficulty = choose_difficulty()
+        word = get_word(difficulty)
         play(word)
         
 if __name__ == "__main__":
