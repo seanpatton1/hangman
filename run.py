@@ -1,5 +1,5 @@
 import random
-from words import words
+from words import easy_words, medium_words, hard_words
 
 def welcome_message(tries, word_completion):
     print("Let's play hangman")
@@ -7,9 +7,16 @@ def welcome_message(tries, word_completion):
     print(word_completion)
     print("\n")
 
-def get_word():
+def get_word(difficulty):
     """gets random words from imported list and returns it as uppercase"""
-    word = random.choice(words)
+    if difficulty == "easy":
+        word = random.choice(easy_words)
+    elif difficulty == "medium":
+        word = random.choice(medium_words)
+    elif difficulty == "hard":
+        word = random.choice(hard_words)
+    else:
+        raise ValueError("Invalid difficulty level")
     return word.upper()
 
 def play(word):
