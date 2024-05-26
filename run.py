@@ -1,14 +1,23 @@
 import random
 from words import easy_words, medium_words, hard_words
 
-def welcome_message(tries, word_completion):
-    print("Let's play hangman")
+# ANSI escape codes for colors
+class colors:
+    RED = '\033[91m'
+    GREEN = '\033[92m'
+    YELLOW = '\033[93m'
+    BLUE = '\033[94m'
+    END = '\033[0m'
+
+
+def display_game(tries, word_completion):
+    """ Displays game and is called in the play(word) function """
     print(display_hangman(tries))
     print(word_completion)
     print("\n")
 
 def get_word(difficulty):
-    """gets random words from imported list and returns it as uppercase"""
+    """ Gets imported list of easy, medium and hard words and returns it as uppercase """
     if difficulty == "easy":
         word = random.choice(easy_words)
     elif difficulty == "medium":
@@ -20,7 +29,8 @@ def get_word(difficulty):
     return word.upper()
 
 def choose_difficulty():
-    """ Chosses difficulty level of word"""
+    """ Chosses difficulty level of word """
+    print("Let's play hangman")
     while True:
         level = input("Choose difficulty level (easy, medium, hard):").lower()
         if level in ["easy", "medium", "hard"]:
@@ -29,14 +39,14 @@ def choose_difficulty():
             print("Invalid choice. Please choose easy, medium, or hard.")
 
 def play(word):
-    """ This section holds structure of the game with nested if statements within while loop"""
-    word_completion = '_' * len(word)
+    """ This section holds structure of the game with nested if statements within while loop """
+    word_completion = '_ ' * len(word)  
     guessed = False
     guessed_letters = [] # creates empty list for guessed characters
     guessed_words = [] # creates empty list for guessed words
     tries = 6 # number of tries for user which relates to hangman image
     
-    welcome_message(tries, word_completion) # Call welcome message at start of game
+    display_game(tries, word_completion) # Call game images at start of game
     
     while not guessed and tries > 0:
         guess = input("Please guess a letter or word: ").upper()
@@ -48,7 +58,7 @@ def play(word):
                 tries -= 1
                 guessed_letters.append(guess)
             else:
-                print("Good job,", guess, "is in the word")
+                print(colors.GREEN + "Good job," + colors.END, guess, "is in the word")
                 guessed_letters.append(guess)
                 word_as_list = list(word_completion)
                 indices = [i for i, letter in enumerate(word) if letter == guess]
@@ -74,15 +84,12 @@ def play(word):
         print(word_completion)
         print("\n")
     if guessed:
-        print("Congrats, you guessed the word! You win!")
+        print(colors.GREEN + "Congrats, you guessed the word! You win!" + colors.END)
     else:
-        print("Sorry, you ran out of tries. The word was " + word + ". Maybe next time!")
+        print(colors.RED + "Sorry, you ran out of tries. The word was " + colors.END + colors.BLUE + word + colors.END + colors.RED + ". Maybe next time!" + colors.END)
         
 def display_hangman(tries):
-    """ 
-    reveals the hangman based on the number of tries
-    
-    """
+    """ reveals the hangman based on the number of tries """
     stages = [  """
             --------
             |      |
