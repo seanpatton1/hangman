@@ -19,6 +19,15 @@ def get_word(difficulty):
         raise ValueError("Invalid difficulty level")
     return word.upper()
 
+def choose_difficulty():
+    """ Chosses difficulty level of word"""
+    while True:
+        level = input("Choose difficulty level (easy, medium, hard):").lower()
+        if level in ["easy", "medium", "hard"]:
+            return level
+        else:
+            print("Invalid choice. Please choose easy, medium, or hard.")
+
 def play(word):
     """ This section holds structure of the game with nested if statements within while loop"""
     word_completion = '_' * len(word)
