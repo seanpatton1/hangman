@@ -12,6 +12,15 @@ class colors:
     DARKCYAN = '\033[36m'
     UNDERLINE = '\033[4m'
     END = '\033[0m'
+    
+def welcome_message():
+    """ Welcome message and option for user to read instructions before beginning the game """
+    instructions = ("In Hangman, the goal is to guess the hidden word one letter at a time before the hangman figure is fully drawn. "
+                    "Correct guesses reveal letters in the word, while incorrect guesses add parts to the hangman. "
+                    "The game is won by revealing the entire word before the hangman is completed.")
+    start_one = input(colors.GREEN + "Welcome! Before we begin the game, would you like to see the instructions? (Y/N): " + colors.END).upper()
+    if start_one == 'Y':
+        print(colors.CYAN + instructions + colors.END)
 
 
 def display_game(tries, word_completion):
@@ -163,10 +172,11 @@ def display_hangman(tries):
     
 
 def main():
+    welcome_message()
     difficulty = choose_difficulty()
     word = get_word(difficulty)
     play(word)
-    while input("Play Again? (Y/N)").upper() == "Y":
+    while input(colors.GREEN + "Play Again? (Y/N)" + colors.END).upper() == "Y":
         difficulty = choose_difficulty()
         word = get_word(difficulty)
         play(word)
