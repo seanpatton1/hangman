@@ -33,7 +33,7 @@ def welcome_message():
 
 
 def display_game(tries, word_completion, guessed_letters):
-    """ Displays game and is called in the play(word) function """
+    """ Displays game and is called in the play(word) function and the guessed letters """
     print(display_hangman(tries))
     print(word_completion)
     print(colors.GREEN + "Guessed letters: " + colors.END + ", ".join(guessed_letters))
@@ -192,6 +192,7 @@ def display_hangman(tries):
 
 
 def main():
+    """ Main function containing game functions """
     welcome_message()
     difficulty = choose_difficulty()
     word = get_word(difficulty)
