@@ -26,7 +26,7 @@ def welcome_message():
                     "won by revealing the entire word before the hangman is "
                     "completed.")
     start_one = input(colors.GREEN + "Welcome! Before we begin the game, "
-                      "would you like to see the instructions? (Y/N): " +
+                      "would you like to see the instructions? (Y/N):\n" +
                       colors.END).upper()
     if start_one == 'Y':
         print(colors.CYAN + instructions + colors.END)
@@ -60,7 +60,7 @@ def choose_difficulty():
     print(colors.BLUE + "Let's play hangman" + colors.END)
     while True:
         level = input(colors.CYAN + "Choose difficulty level "
-                      "(easy, medium, hard):" + colors.END).lower()
+                      "(easy, medium, hard):\n" + colors.END).lower()
         if level in ["easy", "medium", "hard"]:
             return level
         else:
@@ -81,7 +81,7 @@ def play(word):
     display_game(tries, word_completion, guessed_letters)  # Call game images at start of game
 
     while not guessed and tries > 0:
-        guess = input(colors.BLUE + "Please guess a letter or word: " +
+        guess = input(colors.BLUE + "Please guess a letter or word:\n" +
                       colors.END).upper()
         if len(guess) == 1 and guess.isalpha():
             if guess in guessed_letters:
