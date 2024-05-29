@@ -32,10 +32,11 @@ def welcome_message():
         print(colors.CYAN + instructions + colors.END)
 
 
-def display_game(tries, word_completion):
+def display_game(tries, word_completion, guessed_letters):
     """ Displays game and is called in the play(word) function """
     print(display_hangman(tries))
     print(word_completion)
+    print(colors.GREEN + "Guessed letters: " + colors.END + ", ".join(guessed_letters))
     print("\n")
 
 
@@ -77,7 +78,7 @@ def play(word):
     guessed_words = []  # creates empty list for guessed words
     tries = 6  # number of tries for user which relates to hangman image
 
-    display_game(tries, word_completion)  # Call game images at start of game
+    display_game(tries, word_completion, guessed_letters)  # Call game images at start of game
 
     while not guessed and tries > 0:
         guess = input(colors.BLUE + "Please guess a letter or word: " +
@@ -117,9 +118,7 @@ def play(word):
 
         else:
             print("Not a valid guess.")
-        print(display_hangman(tries))
-        print(word_completion)
-        print("\n")
+        display_game(tries, word_completion, guessed_letters)
     if guessed:
         print(colors.GREEN + "Congrats, you guessed the word! You win!" +
               colors.END)
