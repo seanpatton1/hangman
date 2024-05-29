@@ -1,4 +1,5 @@
 import random
+import os
 from words import easy_words, medium_words, hard_words
 
 
@@ -19,6 +20,10 @@ def welcome_message():
     """ Welcome message and option for user to read instructions
         before beginning the game.
     """
+    os.system("cls" if os.name == "nt" else "clear")  # Clear the terminal
+
+    # Welcome message
+
     instructions = ("In Hangman, the goal is to guess the hidden word one "
                     "letter at a time before the hangman figure is fully "
                     "drawn. Correct guesses reveal letters in the word, while "
@@ -34,6 +39,7 @@ def welcome_message():
 
 def display_game(tries, word_completion, guessed_letters):
     """ Displays game and is called in the play(word) function and the guessed letters """
+    print(colors.PURPLE + "<-----HANGMAN----->" + colors.END)
     print(display_hangman(tries))
     print(word_completion)
     print(colors.GREEN + "Guessed letters: " + colors.END + ", ".join(guessed_letters))
