@@ -37,8 +37,8 @@ def welcome_message():
     # Welcome message
 
     instructions = ("In Hangman, the goal is to guess the hidden word one "
-                    "letter at a time before the hangman figure is fully "
-                    "drawn. Correct guesses reveal letters in the word, while "
+                    "letter at a time before \nthe hangman figure is fully "
+                    "drawn. \nCorrect guesses reveal letters in the word, while "
                     "incorrect guesses add parts to the hangman. The game is "
                     "won by revealing the entire word before the hangman is "
                     "completed.")
