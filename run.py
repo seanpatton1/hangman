@@ -54,6 +54,7 @@ def display_game(tries, word_completion, guessed_letters):
     """ Displays game and is called in the play(word) function and
         the guessed letters
     """
+    os.system("cls" if os.name == "nt" else "clear")  # Clear the terminal
     print(display_hangman(tries))
     print(word_completion)
     print(ColorsGame.GREEN + "Guessed letters: " + ColorsGame.END + ", "
@@ -88,11 +89,11 @@ def choose_difficulty():
             print(ColorsGame.RED + "Invalid choice. Please choose easy, medium, "
                   "or hard." + ColorsGame.END)
 
-
 def play(word):
     """ This section holds structure of the game
         with nested if statements within while loop
     """
+    
     word_completion = '_' * len(word)
     guessed = False
     guessed_letters = []  # creates empty list for guessed characters
