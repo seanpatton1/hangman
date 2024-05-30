@@ -1,5 +1,6 @@
 """ all imports for game """
 import random
+import time
 import os
 from words import easy_words, medium_words, hard_words
 
@@ -19,7 +20,8 @@ class ColorsGame:
 
 def game_title():
     """ Hangman title """
-    print("\033[1;34m")
+    os.system("cls" if os.name == "nt" else "clear")  # Clear the terminal
+    time.sleep(0.1)
     print("HANGMAN".center(80, "-"))
     print("\n")
 
@@ -28,7 +30,6 @@ def welcome_message():
     """ Welcome message and option for user to read instructions
         before beginning the game.
     """
-    os.system("cls" if os.name == "nt" else "clear")  # Clear the terminal
 
     # Print game title
     game_title()
@@ -41,7 +42,7 @@ def welcome_message():
                     "incorrect guesses add parts to the hangman. The game is "
                     "won by revealing the entire word before the hangman is "
                     "completed.")
-    start_one = input(ColorsGame.GREEN + "Welcome! Before we begin the game, "
+    start_one = input(ColorsGame.GREEN + "Welcome! Before we begin the game,\n"
                       "would you like to see the instructions? (Y/N):\n" +
                       ColorsGame.END).upper()
     if start_one == 'Y':
