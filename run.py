@@ -30,6 +30,9 @@ def welcome_message():
     """
     os.system("cls" if os.name == "nt" else "clear")  # Clear the terminal
 
+    # Print game title
+    game_title()
+
     # Welcome message
 
     instructions = ("In Hangman, the goal is to guess the hidden word one "
@@ -215,11 +218,19 @@ def main():
     difficulty = choose_difficulty()
     word = get_word(difficulty)
     play(word)
-    while input(ColorsGame.GREEN + "Play Again? (Y/N)" +
-                ColorsGame.END).upper() == "Y":
-        difficulty = choose_difficulty()
-        word = get_word(difficulty)
-        play(word)
+    #  Code to allow user to play again
+    while True:
+        play_again = input(ColorsGame.GREEN + "Play Again? (Y/N):\n" + ColorsGame.END).upper()
+        if play_again in ['Y', 'N']:
+            if play_again == 'Y':
+                difficulty = choose_difficulty()
+                word = get_word(difficulty)
+                play(word)
+            else:
+                print(ColorsGame.GREEN + "Thanks for playing! Goodbye!" + ColorsGame.END)
+                break
+        else:
+            print(ColorsGame.RED + "Invalid input. Please enter Y or N." + ColorsGame.END)
 
 
 if __name__ == "__main__":

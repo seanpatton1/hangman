@@ -8,7 +8,7 @@ The objective is to guess the hidden word one letter at a time. The computer ran
 
 You win by successfully guessing all letters in the word before the hangman diagram is fully drawn, and you lose if you fail to guess the word before the hangman diagram is completed. 
 
-Visit the deployed website [here](https://seanpatton1.github.io/rock-paper-scissors/).
+Visit the deployed game [here]().
 
 ## Table of Contents
 
