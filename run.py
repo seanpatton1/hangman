@@ -41,7 +41,7 @@ def welcome_message():
                     "drawn. \nCorrect guesses reveal letters in the word, while "
                     "incorrect guesses add parts\nto the hangman.\nThe game is "
                     "won by revealing the entire word before the hangman is "
-                    "completed.")
+                    "completed.\n")
     start_one = input(ColorsGame.GREEN + "Welcome! Before we begin the game,\n"
                       "would you like to see the instructions? (Y/N):\n" +
                       ColorsGame.END).upper()
@@ -77,7 +77,7 @@ def get_word(difficulty):
 
 def choose_difficulty():
     """ Chooses difficulty level of word """
-    print(ColorsGame.BLUE + "Let's play hangman" + ColorsGame.END)
+    print(ColorsGame.BLUE + "Let's play hangman\n" + ColorsGame.END)
     while True:
         level = input(ColorsGame.CYAN + "Choose difficulty level "
                       "(easy, medium, hard):\n" + ColorsGame.END).lower()
