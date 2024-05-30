@@ -16,6 +16,13 @@ class colors:
     END = '\033[0m'
 
 
+def game_title():
+    """ Hangman title """
+    print("\033[1;34m")
+    print("HANGMAN".center(80, "-"))
+    print("\n")
+
+
 def welcome_message():
     """ Welcome message and option for user to read instructions
         before beginning the game.
@@ -39,7 +46,6 @@ def welcome_message():
 
 def display_game(tries, word_completion, guessed_letters):
     """ Displays game and is called in the play(word) function and the guessed letters """
-    print(colors.PURPLE + "<-----HANGMAN----->" + colors.END)
     print(display_hangman(tries))
     print(word_completion)
     print(colors.GREEN + "Guessed letters: " + colors.END + ", ".join(guessed_letters))
