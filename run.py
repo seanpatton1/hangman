@@ -22,6 +22,7 @@ def game_title():
     """ Hangman title """
     os.system("cls" if os.name == "nt" else "clear")  # Clear the terminal
     time.sleep(0.1)
+    print("\033[1;34m")
     print("HANGMAN".center(80, "-"))
     print("\n")
 
@@ -36,7 +37,7 @@ def welcome_message():
 
     # Welcome message
 
-    instructions = ("In Hangman, the goal is to guess the hidden word one "
+    instructions = ("\nIn Hangman, the goal is to guess the hidden word one "
                     "letter at a time before \nthe hangman figure is fully "
                     "drawn. \nCorrect guesses reveal letters in the word, while "
                     "incorrect guesses add parts\nto the hangman.\nThe game is "
