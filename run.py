@@ -18,9 +18,13 @@ class ColorsGame:
     END = '\033[0m'
 
 
+def clear_terminal():
+    """ Clears the terminal based on the OS """
+    os.system("cls" if os.name == "nt" else "clear")
+
 def game_title():
     """ Hangman title """
-    os.system("cls" if os.name == "nt" else "clear")  # Clear the terminal
+    clear_terminal()  # Clear the terminal
     time.sleep(0.1)
     print("\033[1;34m")
     print("HANGMAN".center(80, "-"))
@@ -54,7 +58,6 @@ def display_game(tries, word_completion, guessed_letters):
     """ Displays game and is called in the play(word) function and
         the guessed letters
     """
-    os.system("cls" if os.name == "nt" else "clear")  # Clear the terminal
     print(display_hangman(tries))
     print(word_completion)
     print(ColorsGame.GREEN + "Guessed letters: " + ColorsGame.END + ", "
@@ -79,6 +82,7 @@ def get_word(difficulty):
 
 def choose_difficulty():
     """ Chooses difficulty level of word """
+    clear_terminal()  # Clear the terminal
     print(ColorsGame.BLUE + "Let's play hangman\n" + ColorsGame.END)
     while True:
         level = input(ColorsGame.CYAN + "Choose difficulty level "
@@ -93,7 +97,7 @@ def play(word):
     """ This section holds structure of the game
         with nested if statements within while loop
     """
-    
+
     word_completion = '_' * len(word)
     guessed = False
     guessed_letters = []  # creates empty list for guessed characters
@@ -216,7 +220,6 @@ def display_hangman(tries):
 
 def main():
     """ Main function containing game functions """
-    game_title()
     welcome_message()
     difficulty = choose_difficulty()
     word = get_word(difficulty)
@@ -226,6 +229,7 @@ def main():
         play_again = input(ColorsGame.GREEN + "Play Again? (Y/N):\n" + ColorsGame.END).upper()
         if play_again in ['Y', 'N']:
             if play_again == 'Y':
+                clear_terminal()  # Clear the terminal for new game
                 difficulty = choose_difficulty()
                 word = get_word(difficulty)
                 play(word)
