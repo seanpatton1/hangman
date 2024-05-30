@@ -1,6 +1,6 @@
 # Hangman
 
-![Hangman responsive image]()
+![Hangman responsive image](images/responsive.png)
 
 I have developed a hangman game in Python that is played in the terminal. In this game, you compete against the computer, and it offers three difficulty levels: easy, medium, and hard. 
 
@@ -8,13 +8,15 @@ The objective is to guess the hidden word one letter at a time. The computer ran
 
 You win by successfully guessing all letters in the word before the hangman diagram is fully drawn, and you lose if you fail to guess the word before the hangman diagram is completed. 
 
-Visit the deployed game [here]().
+Visit the deployed game [here](https://hangman-terminal-game-84634e4afa2f.herokuapp.com/).
 
 ## Table of Contents
 
 1. [User Experience (UX)](#user-experience-ux)
-    1. [Project Goals](#project-goals)
-    2. [Color Scheme](#color-scheme)
+    1. [Project Layout diagram](#project-goals)
+    2. [Project Goals](#project-goals)
+    3. [Implementation](#implentation)
+    3. [Color Scheme](#color-scheme)
 2. [Features](#features)
     1. [General](#general)
     2. [Welcome Message](#welcome)
@@ -37,12 +39,46 @@ Visit the deployed game [here]().
 
 ## User Experience (UX)
 
+### Project Layout diagram
+
+![Project Layout diagram](images/diagram.png)
+
 ### Project Goals
 
-* The game page presents an inviting layout with supporting images for enhanced gameplay.
+- I want to develop a Hangman game that's effortless to play and straightforward to navigate.
+    - Was this achieved?
+        - Yes
+    - How was this achieved?
+        - The game provides clear guidance at every step. Initially, it prompts users to view instructions by typing either Y or N (lowercase is acceptable). Such options are consistently available throughout the game. Users can also select difficulty levels, and all previously chosen letters are visible to them.
+
+- I want to ensure that the user can play the game as many times as they wish.
+    - Was this achieved?
+        - Yes
+    - How was this achieved?
+        - Upon completion of the game, the user is presented with the choice to replay by typing either Y or N (lowercase is acceptable).
+
+- I want the user to be able to select from different difficulty levels.
+    - Was this achieved?
+        - Yes
+    - How was this achieved?
+        - I've included a separate file(words.py) categorizing words into three groups: easy, medium, and hard. At the beginning of the game, users will be prompted to choose from these options by typing either "easy," "medium," or "hard," and the game will select words accordingly from the relevant list.
+
+- I want the user to have access to all pertinent information during gameplay, including their guesses, remaining attempts, and the Hangman image.
+    - Was this achieved?
+        - Yes
+    - How was this achieved?
+        - Once the game commences, the Hangman image will be displayed. As the user starts and selects a letter, if it's correct, they'll be notified and the letter will be added to a list of guessed letters. In case of an incorrect choice, the user will be informed, and the letter will be added to the guessed letters section. Additionally, the Hangman's parts will begin to be added.
+
+### Implementation
+
+- At the outset of this project, I started by outlining the basic design depicted in the Project Layout Diagram. This layout served as the blueprint for the final game upon completion. Initially, I sought guidance from various YouTube videos and step-by-step guides to construct the fundamental game without incorporating difficulty levels or comprehensive instructions. After establishing this foundation, I proceeded to expand upon it, gradually refining the game to align with the initial project design.
 
 
 ### Color Scheme
+
+- I have created a class of colours to choose from and I have added to the code where required. I have referenced [ANSI escape code](https://en.wikipedia.org/wiki/ANSI_escape_code) to get the relevant codes and I have used this as reference throughout. 
+
+![ANSI Image](images/colours.png)
 
 
 ## Features
