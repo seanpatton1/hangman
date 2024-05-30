@@ -145,7 +145,15 @@ def play(word):
 
         else:
             print("Not a valid guess.")
+        
+        # Display the updated game state after each guess
+        time.sleep(0.75)
+        clear_terminal()
         display_game(tries, word_completion, guessed_letters)
+
+  # Final state display
+    clear_terminal()
+    display_game(tries, word_completion, guessed_letters)
     if guessed:
         print(ColorsGame.GREEN + "Congrats, you guessed the word! You win!" +
               ColorsGame.END)
@@ -153,7 +161,6 @@ def play(word):
         print(ColorsGame.RED + "Sorry, you ran out of tries. The word was " +
               ColorsGame.END + ColorsGame.BLUE + word + ColorsGame.END + ColorsGame.RED +
               ". Maybe next time!" + ColorsGame.END)
-
 
 def display_hangman(tries):
     """ reveals the hangman based on the number of tries """
