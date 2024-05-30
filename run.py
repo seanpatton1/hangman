@@ -39,7 +39,7 @@ def welcome_message():
     instructions = ("In Hangman, the goal is to guess the hidden word one "
                     "letter at a time before \nthe hangman figure is fully "
                     "drawn. \nCorrect guesses reveal letters in the word, while "
-                    "incorrect guesses add parts to the hangman. The game is "
+                    "incorrect guesses add parts\nto the hangman.\nThe game is "
                     "won by revealing the entire word before the hangman is "
                     "completed.")
     start_one = input(ColorsGame.GREEN + "Welcome! Before we begin the game,\n"
