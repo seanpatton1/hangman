@@ -78,6 +78,8 @@ Visit the deployed game [here](https://hangman-terminal-game-84634e4afa2f.heroku
 
 - I have created a class of colours to choose from and I have added to the code where required. I have referenced [ANSI escape code](https://en.wikipedia.org/wiki/ANSI_escape_code) to get the relevant codes and I have used this as reference throughout. 
 
+- In the initial sections, Cyan and Blue hues were employed for introductory and instructional messages, as well as for indicating difficulty levels. Green was chosen to convey correctness or positive outcomes, while red was reserved for signaling incorrect guesses or negative feedback.
+
 ![ANSI Image](images/colours.png)
 
 

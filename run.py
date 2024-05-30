@@ -13,8 +13,6 @@ class ColorsGame:
     BLUE = '\033[94m'
     PURPLE = '\033[95m'
     CYAN = '\033[96m'
-    DARKCYAN = '\033[36m'
-    UNDERLINE = '\033[4m'
     END = '\033[0m'
 
 
@@ -241,7 +239,7 @@ def main():
                 word = get_word(difficulty)
                 play(word)
             else:
-                print(ColorsGame.GREEN + "Thanks for playing! Goodbye!" + ColorsGame.END)
+                print(ColorsGame.GREEN + "Thanks for playing! Goodbye! Ps. If you want to restart the game - select RUN PROGRAM" + ColorsGame.END)
                 break
         else:
             print(ColorsGame.RED + "Invalid input. Please enter Y or N." + ColorsGame.END)
