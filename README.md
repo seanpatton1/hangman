@@ -95,8 +95,19 @@ Visit the deployed game [here](https://hangman-terminal-game-84634e4afa2f.heroku
 
 * This screen appears at the beggining of the game, welcoming the user and giving the option to see the instructions.
 
-![Game Start](images/welcome.png)
+![Game Start](images/difficulty.png)
 
+### instructions Screen
+
+* This screen appears at the beggining of the game, welcoming the user and giving the option to see the instructions.
+
+![Game Start](images/instructions.png)
+
+### Start Game Screen
+
+* This screen appears at the beggining of the game, welcoming the user and giving the option to see the instructions.
+
+![Game Start](images/start-game-image.png)
 
 ## Technologies Used
 
