@@ -93,7 +93,7 @@ Visit the deployed game [here](https://hangman-terminal-game-84634e4afa2f.heroku
 
 ### Difficulty Screen
 
-* This screen appears at the beggining of the game, welcoming the user and giving the option to see the instructions.
+* This screen appears after the user as read the instructions or if they decline the instructions it will also take them here.
 
 ![Game Start](images/difficulty.png)
 
@@ -105,9 +105,32 @@ Visit the deployed game [here](https://hangman-terminal-game-84634e4afa2f.heroku
 
 ### Start Game Screen
 
-* This screen appears at the beggining of the game, welcoming the user and giving the option to see the instructions.
+* THis is the screen shown when the user starts the game.
 
 ![Game Start](images/start-game-image.png)
+
+### Correct guess
+
+* This is what is displayed when the user selects a correct answer
+
+![Correct guess]()
+
+### Incorrect guess
+
+* This is what is displayed when the user selects a incorrect answer.
+
+![Incorrect guess]()
+
+### Correct guess
+
+* This is what is displayed when the user selects a correct answer
+
+![Correct guess]()
+
+
+## Extra Features
+
+Once I had completed the basic game structure which was working I have then added in 3 difficultly levels, creating 3 new lists in words.py. I have also added in the stages of the hangman which changes based on user guess.
 
 ## Technologies Used
 
