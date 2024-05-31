@@ -156,8 +156,8 @@ Once I had completed the basic game structure which was working I have then adde
 * [Am I Responsive?](http://ami.responsivedesign.is/#)
     - Am I Responsive was used to for the beggining image at the beggining of this README
 
-* [W3C Markup Validator](https://validator.w3.org/)
-    - W3C Markup Validator was used to validate the HTML code.
+* [CI Python Linter](https://pep8ci.herokuapp.com/#)
+    - CI Python Linter was used to validate the Python code.
 
 [Back to top ⇧](#table-of-contents)
 
@@ -193,9 +193,9 @@ Once I had completed the basic game structure which was working I have then adde
 
     Feature | Outcome | Example | Pass/Fail
     --- | --- | --- | ---
-    Welcome message | When the game loads - Message appears asking user if they want to read instructions | Example pic to be entered | Pass - Game screen loads as expected
-    Optional instructions | Give user the option to see instructions by pressing either Y or N - pressing Y | Example pic to be entered | Pass - User sees instructions
-    Optional instructions | Give user the option to see instructions by pressing either Y or N - pressing N | Example pic to be entered | Pass - User is taken to next screen, bypassing instructions.
+    Welcome message | When the game loads - Welcome message appears  and message asking user if they want to read instructions | ![Welcome Message](images/test-one.png) | Pass - Game screen loads as expected
+    Optional instructions | Give user the option to see instructions by pressing either Y or N - pressing Y shows the user the instructions| ![instructions](images/test-two.png) | Pass - User sees instructions
+    Optional instructions | Give user the option to see instructions by pressing either Y or N - pressing N takes the user to the difficulty selection screen | [Difficulty Section](images/test-three.png)| Pass - User is taken to next screen, bypassing instructions.
     User selects letter, fills in guessed letters | User enters letter - guessed letter is added to guessed letters list | Example pic to be entered | Pass - Letter added
     Confirmation message of correct letter | Message appears confirming the correct user guess | Example pic to be entered | Pass - Message appears
     Confirmation message of incorrect letter | Message appears confirming the incorrect user guess | Example pic to be entered | Pass - Message appears
