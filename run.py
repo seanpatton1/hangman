@@ -23,7 +23,7 @@ def clear_terminal():
 def game_title():
     """ Hangman title """
     clear_terminal()  # Clear the terminal
-    time.sleep(0.1)
+    time.sleep(0.5)
     print("\033[1;34m")
     print("HANGMAN".center(80, "-"))
     print("\n")
@@ -80,6 +80,7 @@ def get_word(difficulty):
 
 def choose_difficulty():
     """ Chooses difficulty level of word """
+    time.sleep(1)  # Timed delay before removing rules
     clear_terminal()  # Clear the terminal
     print(ColorsGame.BLUE + "Let's play hangman\n" + ColorsGame.END)
     while True:

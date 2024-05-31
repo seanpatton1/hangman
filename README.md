@@ -85,9 +85,17 @@ Visit the deployed game [here](https://hangman-terminal-game-84634e4afa2f.heroku
 
 ## Features
 
-### General
+### Game Start
 
-* The selected color palette features shades of green and blue, complemented by black and white fonts. To create the background, I've utilized a linear gradient blending the green and blue hues.
+* This screen appears at the beggining of the game, welcoming the user and giving the option to see the instructions.
+
+![Game Start](images/welcome.png)
+
+### Difficulty Screen
+
+* This screen appears at the beggining of the game, welcoming the user and giving the option to see the instructions.
+
+![Game Start](images/welcome.png)
 
 
 ## Technologies Used
