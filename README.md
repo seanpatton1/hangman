@@ -113,20 +113,25 @@ Visit the deployed game [here](https://hangman-terminal-game-84634e4afa2f.heroku
 
 * This is what is displayed when the user selects a correct answer
 
-![Correct guess]()
+![Correct guess](images/correct-answer.png)
 
 ### Incorrect guess
 
 * This is what is displayed when the user selects a incorrect answer.
 
-![Incorrect guess]()
+![Incorrect guess](images/incorrect-answer.png)
 
-### Correct guess
+### Winning message
 
-* This is what is displayed when the user selects a correct answer
+* This is what is displayed when the user wins the game
 
-![Correct guess]()
+![Winning Message](images/w-message.png)
 
+### Losing message
+
+* This is what is displayed when the user wins the game
+
+![Losing Message](images/l-message.png)
 
 ## Extra Features
 
@@ -165,7 +170,10 @@ Once I had completed the basic game structure which was working I have then adde
 
 - I was given the following errors
 
-![Linter Errors]()
+![Linter Errors](images/linter-one.png)
+![Linter Errors](images/linter-two.png)
+![Linter Errors](images/linter-three.png)
+![Linter Errors](images/linter-four.png)
 
 - On the list of errors there was Line too long and issues with white space. 
 
@@ -175,7 +183,7 @@ Once I had completed the basic game structure which was working I have then adde
 
 - Once complete I re ran the test to ensure it passed. 
 
-![Linter No Errors]()
+![Linter No Errors](images/linter-fixed.png)
 
 ### Manual Testing
 
@@ -188,6 +196,13 @@ Once I had completed the basic game structure which was working I have then adde
     Welcome message | When the game loads - Message appears asking user if they want to read instructions | Example pic to be entered | Pass - Game screen loads as expected
     Optional instructions | Give user the option to see instructions by pressing either Y or N - pressing Y | Example pic to be entered | Pass - User sees instructions
     Optional instructions | Give user the option to see instructions by pressing either Y or N - pressing N | Example pic to be entered | Pass - User is taken to next screen, bypassing instructions.
+    User selects letter, fills in guessed letters | User enters letter - guessed letter is added to guessed letters list | Example pic to be entered | Pass - Letter added
+    Confirmation message of correct letter | Message appears confirming the correct user guess | Example pic to be entered | Pass - Message appears
+    Confirmation message of incorrect letter | Message appears confirming the incorrect user guess | Example pic to be entered | Pass - Message appears
+    Already guessed | user selects a letter already chosen - error message appears | Example pic to be entered | Pass - Message appears
+    User enters full word | User attempts to guess the word - relevant message appears if correct or incorrect | Example pic to be entered | Pass - Message appears
+    Invalid entry | User enters incorrect character - correct error message appears | Example pic to be entered | Pass - Message appears
+    Empty data entry | User clicks enter or space and enter - message appears telling user of invalid entry | Example pic to be entered | Pass - Message appears
 
 
 [Back to top ⇧](#table-of-contents)

@@ -20,6 +20,7 @@ def clear_terminal():
     """ Clears the terminal based on the OS """
     os.system("cls" if os.name == "nt" else "clear")
 
+
 def game_title():
     """ Hangman title """
     clear_terminal()  # Clear the terminal
@@ -49,8 +50,8 @@ def welcome_message():
 
     instructions = ("\nIn Hangman, the goal is to guess the hidden word one "
                     "letter at a time before \nthe hangman figure is fully "
-                    "drawn. \nCorrect guesses reveal letters in the word, while "
-                    "incorrect guesses add parts\nto the hangman.\nThe game is "
+                    "drawn.\nCorrect guesses reveal letters in the word, while"
+                    "incorrect guesses add parts\nto the hangman.\nThe game is"
                     "won by revealing the entire word before the hangman is "
                     "completed.\n")
 
@@ -96,8 +97,9 @@ def choose_difficulty():
         if level in ["easy", "medium", "hard"]:
             return level
         else:
-            print(ColorsGame.RED + "Invalid choice. Please choose easy, medium, "
-                  "or hard." + ColorsGame.END)
+            print(ColorsGame.RED + "Invalid choice. Please choose easy, "
+                  "medium, or hard." + ColorsGame.END)
+
 
 def play(word):
     """ This section holds structure of the game
@@ -122,12 +124,14 @@ def play(word):
                 print(ColorsGame.RED + "You already guessed the letter" +
                       ColorsGame.END, ColorsGame.BLUE + guess + ColorsGame.END)
             elif guess not in word:
-                print(guess, ColorsGame.RED + "is not in the word" + ColorsGame.END)
+                print(guess, ColorsGame.RED + "is not in the word"
+                      + ColorsGame.END)
                 tries -= 1
                 guessed_letters.append(guess)
             else:
-                print(ColorsGame.GREEN + "Good job," + ColorsGame.END, ColorsGame.BLUE +
-                      guess + ColorsGame.END, ColorsGame.GREEN + "is in the word" +
+                print(ColorsGame.GREEN + "Good job," + ColorsGame.END,
+                      ColorsGame.BLUE + guess + ColorsGame.END,
+                      ColorsGame.GREEN + "is in the word" +
                       ColorsGame.END)
                 guessed_letters.append(guess)
                 word_as_list = list(word_completion)
@@ -140,10 +144,11 @@ def play(word):
                     guessed = True
         elif len(guess) == len(word) and guess.isalpha():
             if guess in guessed_words:
-                print(ColorsGame.RED + "You already guessed the word" + ColorsGame.RED,
-                      ColorsGame.BLUE + guess + ColorsGame.END)
+                print(ColorsGame.RED + "You already guessed the word" +
+                      ColorsGame.RED, ColorsGame.BLUE + guess + ColorsGame.END)
             elif guess != word:
-                print(guess, ColorsGame.RED + "is not in the word." + ColorsGame.END)
+                print(guess, ColorsGame.RED + "is not in the word." +
+                      ColorsGame.END)
                 tries -= 1
                 guessed_words.append(guess)
             else:
@@ -152,14 +157,14 @@ def play(word):
 
         else:
             print("Not a valid guess.")
-        
+
         # Display the updated game state after each guess
         time.sleep(0.75)
         clear_terminal()
         game_title()
         display_game(tries, word_completion, guessed_letters)
 
-  # Final state display
+    # Final state display
     clear_terminal()
     display_game(tries, word_completion, guessed_letters)
     if guessed:
@@ -167,8 +172,9 @@ def play(word):
               ColorsGame.END)
     else:
         print(ColorsGame.RED + "Sorry, you ran out of tries. The word was " +
-              ColorsGame.END + ColorsGame.BLUE + word + ColorsGame.END + ColorsGame.RED +
-              ". Maybe next time!" + ColorsGame.END)
+              ColorsGame.END + ColorsGame.BLUE + word + ColorsGame.END +
+              ColorsGame.RED + ". Maybe next time!" + ColorsGame.END)
+
 
 def display_hangman(tries):
     """ reveals the hangman based on the number of tries """
@@ -241,7 +247,8 @@ def main():
     play(word)
     #  Code to allow user to play again
     while True:
-        play_again = input(ColorsGame.GREEN + "Play Again? (Y/N):\n" + ColorsGame.END).upper()
+        play_again = input(ColorsGame.GREEN + "Play Again? (Y/N):\n" +
+                           ColorsGame.END).upper()
         if play_again in ['Y', 'N']:
             if play_again == 'Y':
                 clear_terminal()  # Clear the terminal for new game
@@ -249,10 +256,13 @@ def main():
                 word = get_word(difficulty)
                 play(word)
             else:
-                print(ColorsGame.GREEN + "Thanks for playing! Goodbye! Ps. If you want to restart the game - select RUN PROGRAM" + ColorsGame.END)
+                print(ColorsGame.GREEN + "Thanks for playing! Goodbye! Ps."
+                      "If you want to restart the game - select RUN PROGRAM" +
+                      ColorsGame.END)
                 break
         else:
-            print(ColorsGame.RED + "Invalid input. Please enter Y or N." + ColorsGame.END)
+            print(ColorsGame.RED + "Invalid input. Please enter Y or N." +
+                  ColorsGame.END)
 
 
 if __name__ == "__main__":
