@@ -23,7 +23,6 @@ def clear_terminal():
 def game_title():
     """ Hangman title """
     clear_terminal()  # Clear the terminal
-    time.sleep(0.5)
     print("\033[1;34m")
     print("HANGMAN".center(80, "-"))
     print("\n")
@@ -39,15 +38,22 @@ def welcome_message():
 
     # Welcome message
 
+    start_one = input(ColorsGame.GREEN + "Welcome! Before we begin the game,\n"
+                      "would you like to see the instructions? (Y/N):\n" +
+                      ColorsGame.END).upper()
+
+    clear_terminal()  # Clear the terminal
+
+    # Print game title
+    game_title()
+
     instructions = ("\nIn Hangman, the goal is to guess the hidden word one "
                     "letter at a time before \nthe hangman figure is fully "
                     "drawn. \nCorrect guesses reveal letters in the word, while "
                     "incorrect guesses add parts\nto the hangman.\nThe game is "
                     "won by revealing the entire word before the hangman is "
                     "completed.\n")
-    start_one = input(ColorsGame.GREEN + "Welcome! Before we begin the game,\n"
-                      "would you like to see the instructions? (Y/N):\n" +
-                      ColorsGame.END).upper()
+
     if start_one == 'Y':
         print(ColorsGame.CYAN + instructions + ColorsGame.END)
 
@@ -82,6 +88,7 @@ def choose_difficulty():
     """ Chooses difficulty level of word """
     time.sleep(3)  # Timed delay before removing rules
     clear_terminal()  # Clear the terminal
+    game_title()
     print(ColorsGame.BLUE + "Let's play hangman\n" + ColorsGame.END)
     while True:
         level = input(ColorsGame.CYAN + "Choose difficulty level "
@@ -104,6 +111,7 @@ def play(word):
     tries = 6  # number of tries for user which relates to hangman image
 
     # Call game images at start of game
+    game_title()
     display_game(tries, word_completion, guessed_letters)
 
     while not guessed and tries > 0:
@@ -148,6 +156,7 @@ def play(word):
         # Display the updated game state after each guess
         time.sleep(0.75)
         clear_terminal()
+        game_title()
         display_game(tries, word_completion, guessed_letters)
 
   # Final state display
