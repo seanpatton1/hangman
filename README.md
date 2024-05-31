@@ -159,19 +159,23 @@ Once I had completed the basic game structure which was working I have then adde
 
 ## Testing
 
+### Python
 
-### Code Validation
+- I have used CI Python Linter[Python Linter](https://pep8ci.herokuapp.com/)
 
-* 
+- I was given the following errors
 
+![Linter Errors]()
 
+- On the list of errors there was Line too long and issues with white space. 
 
-    
+- To fix there errors I have readjusted the code/comments to fall within the parameters of 79 characters.
 
-### Tools Testing
+- The process I followed was to fix one issue at a time on the linter to ensure the error was fixed and then made the change on the code itself. 
 
-* [Chrome DevTools](https://developer.chrome.com/docs/devtools/)
+- Once complete I re ran the test to ensure it passed. 
 
+![Linter No Errors]()
 
 ### Manual Testing
 
@@ -179,15 +183,11 @@ Once I had completed the basic game structure which was working I have then adde
 
     - General
 
-    Feature | Outcome | Pass/Fail
-    --- | --- | ---
-    Responsive design | The game can be played on mobile, tablet and Desktop | Pass
-
-    - Game Section
-
-    Feature | Outcome | Pass/Fail
-    --- | --- | ---
-    Rock Button | Brings up the correct image of a rock for both players. | Pass
+    Feature | Outcome | Example | Pass/Fail
+    --- | --- | --- | ---
+    Welcome message | When the game loads - Message appears asking user if they want to read instructions | Example pic to be entered | Pass - Game screen loads as expected
+    Optional instructions | Give user the option to see instructions by pressing either Y or N - pressing Y | Example pic to be entered | Pass - User sees instructions
+    Optional instructions | Give user the option to see instructions by pressing either Y or N - pressing N | Example pic to be entered | Pass - User is taken to next screen, bypassing instructions.
 
 
 [Back to top ⇧](#table-of-contents)
