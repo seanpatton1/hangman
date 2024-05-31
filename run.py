@@ -80,7 +80,7 @@ def get_word(difficulty):
 
 def choose_difficulty():
     """ Chooses difficulty level of word """
-    time.sleep(1)  # Timed delay before removing rules
+    time.sleep(3)  # Timed delay before removing rules
     clear_terminal()  # Clear the terminal
     print(ColorsGame.BLUE + "Let's play hangman\n" + ColorsGame.END)
     while True:
