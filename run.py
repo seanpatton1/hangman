@@ -57,7 +57,7 @@ def welcome_message():
 
     if start_one == 'Y':
         print(ColorsGame.CYAN + instructions + ColorsGame.END)
-
+        time.sleep(3)
 
 def display_game(tries, word_completion, guessed_letters):
     """ Displays game and is called in the play(word) function and
@@ -87,7 +87,6 @@ def get_word(difficulty):
 
 def choose_difficulty():
     """ Chooses difficulty level of word """
-    time.sleep(3)  # Timed delay before removing rules
     clear_terminal()  # Clear the terminal
     game_title()
     print(ColorsGame.BLUE + "Let's play hangman\n" + ColorsGame.END)

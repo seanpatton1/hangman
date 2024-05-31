@@ -195,11 +195,11 @@ Once I had completed the basic game structure which was working I have then adde
     --- | --- | --- | ---
     Welcome message | When the game loads - Welcome message appears  and message asking user if they want to read instructions | ![Welcome Message](images/test-one.png) | Pass - Game screen loads as expected
     Optional instructions | Give user the option to see instructions by pressing either Y or N - pressing Y shows the user the instructions| ![instructions](images/test-two.png) | Pass - User sees instructions
-    Optional instructions | Give user the option to see instructions by pressing either Y or N - pressing N takes the user to the difficulty selection screen | [Difficulty Section](images/test-three.png)| Pass - User is taken to next screen, bypassing instructions.
-    User selects letter, fills in guessed letters | User enters letter - guessed letter is added to guessed letters list | Example pic to be entered | Pass - Letter added
-    Confirmation message of correct letter | Message appears confirming the correct user guess | Example pic to be entered | Pass - Message appears
-    Confirmation message of incorrect letter | Message appears confirming the incorrect user guess | Example pic to be entered | Pass - Message appears
-    Already guessed | user selects a letter already chosen - error message appears | Example pic to be entered | Pass - Message appears
+    Optional instructions | Give user the option to see instructions by pressing either Y or N - pressing N takes the user to the difficulty selection screen | ![Difficulty Section](images/test-three.png) | Pass - User is taken to next screen, bypassing instructions.
+    User selects letter, fills in guessed letters | User enters letter - guessed letter is added to guessed letters list | ![Difficulty Section](images/test-four.png) ![Difficulty Section](images/test-five.png) | Pass - Letter added
+    Confirmation message of correct letter | Message appears confirming the correct user guess | ![Difficulty Section](images/test-six.png) | Pass - Message appears
+    Confirmation message of incorrect letter | Message appears confirming the incorrect user guess | ![Difficulty Section](images/test-seven.png) | Pass - Message appears
+    Already guessed | user selects a letter already chosen - error message appears | ![Difficulty Section](images/test-eight.png) ![Difficulty Section](images/test-nine.png) | Pass - Message appears
     User enters full word | User attempts to guess the word - relevant message appears if correct or incorrect | Example pic to be entered | Pass - Message appears
     Invalid entry | User enters incorrect character - correct error message appears | Example pic to be entered | Pass - Message appears
     Empty data entry | User clicks enter or space and enter - message appears telling user of invalid entry | Example pic to be entered | Pass - Message appears
