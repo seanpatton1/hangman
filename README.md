@@ -18,11 +18,18 @@ Visit the deployed game [here](https://hangman-terminal-game-84634e4afa2f.heroku
     3. [Implementation](#implentation)
     3. [Color Scheme](#color-scheme)
 2. [Features](#features)
-    1. [General](#general)
-    2. [Welcome Message](#welcome)
-    3. [Technologies Used](#technologies-used)
-    1. [Languages Used](#languages-used)
-    2. [Libraries and Programs Used](#libraries-and-programs-used)
+    1. [Game Start](#game-start)
+    2. [Difficulty Screen](#difficulty-screen)
+    3. [Instructions Screen](#instructions-screen)
+    4. [Start Game Screen](#start-game-screen)
+    5. [Correct Guess](#correct-guess)
+    6. [Incorrect Guess](#incorrect-guess)
+    7. [Winning Message](#winning-message)
+    8. [Losing Message](#losing-message)
+    9. [Extra Features](#extra-features)
+    10. [Technologies Used](#technologies-used)
+    11. [Languages Used](#languages-used)
+    12. [Libraries and Programs Used](#libraries-and-programs-used)
 4. [Testing](#testing)
     1. [Code Validation](#code-validation)
     2. [Tools Testing](#tools-testing)
@@ -94,19 +101,19 @@ Visit the deployed game [here](https://hangman-terminal-game-84634e4afa2f.heroku
 
 * This screen appears after the user has read the instructions or declined to view them.
 
-![Game Start](images/difficulty.png)
+![Difficulty Screen](images/difficulty.png)
 
-### instructions Screen
+### Instructions Screen
 
 * At the start of the game, this screen welcomes the user and provides the option to view the instructions.
 
-![Game Start](images/instructions.png)
+![Instructions Screen](images/instructions.png)
 
 ### Start Game Screen
 
 * This is the screen displayed when the user starts the game.
 
-![Game Start](images/start-game-image.png)
+![Start Game Screen](images/start-game-image.png)
 
 ### Correct guess
 
