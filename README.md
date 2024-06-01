@@ -32,7 +32,6 @@ Visit the deployed game [here](https://hangman-terminal-game-84634e4afa2f.heroku
     1. [GitHub Pages](#github-pages)
 7. [Credits](#credits)
     1. [Content](#content)
-    3. [Code](#code)
 8. [Acknowledgements](#acknowledgements)
 
 ***
@@ -299,21 +298,21 @@ Go back to [Table of contents](#table-of-contents)
 
 ## Credits 
 
-* 
+* [Canva](https://www.canva.com/) - I used this to create the chart
+
+* [CI Python Linter](https://pep8ci.herokuapp.com/#) - I used this to check for errors
+
+* [ChatGPT](https://chatgpt.com/?oai-dm=1) - I used this to create the three groups of lists
 
 ### Content
 
-- 
-   
-
-### Code
-
-- 
+- I have watched through multiple walkthrough videos while building this game. [Kite](https://www.youtube.com/@KiteHQ) Account was used in this process
 
 [Back to top ⇧](#table-of-contents)
 
 ## Acknowledgements
 
-- 
+- Marcel was a great help guiding me through the process helping me focus and point me in the right direction.
+- I would also like to thank my partnet who has been patient with me while I have studied and through the building of this project
 
 [Back to top ⇧](#table-of-contents)
