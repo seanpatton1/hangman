@@ -59,6 +59,7 @@ def welcome_message():
         print(ColorsGame.CYAN + instructions + ColorsGame.END)
         time.sleep(3)
 
+
 def display_game(tries, word_completion, guessed_letters):
     """ Displays game and is called in the play(word) function and
         the guessed letters

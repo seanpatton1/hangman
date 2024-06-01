@@ -167,7 +167,7 @@ Once I had completed the basic game structure which was working I have then adde
 
 ### Python
 
-- I have used CI Python Linter[Python Linter](https://pep8ci.herokuapp.com/)
+- I have used [CI Python Linter](https://pep8ci.herokuapp.com/)
 
 - I was given the following errors
 
@@ -176,13 +176,20 @@ Once I had completed the basic game structure which was working I have then adde
 ![Linter Errors](images/linter-three.png)
 ![Linter Errors](images/linter-four.png)
 
-- On the list of errors there was Line too long and issues with white space. 
+- E302 expected 2 blank lines, found 1
+    - To fix this I added another line, giving it the required 2 blank lines
 
-- To fix there errors I have readjusted the code/comments to fall within the parameters of 79 characters.
+- W293 blank line contacts whitespace
+    - Removed white space through the code
 
-- The process I followed was to fix one issue at a time on the linter to ensure the error was fixed and then made the change on the code itself. 
+- E501 line too long (91 > 79 characters)
+    - As you can see from the above images there was quite a few over, I adjusted all code onto new lines where required.
 
-- Once complete I re ran the test to ensure it passed. 
+- W292 no newline at end of file
+    - Added new line at the end of the file
+
+- E128 continuation line under-indented for visual indent
+    - fixed indentation issue on linter and then adjusted on the run.py file
 
 ![Linter No Errors](images/linter-fixed.png)
 
