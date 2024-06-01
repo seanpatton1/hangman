@@ -86,55 +86,55 @@ Visit the deployed game [here](https://hangman-terminal-game-84634e4afa2f.heroku
 
 ### Game Start
 
-* This screen appears at the beggining of the game, welcoming the user and giving the option to see the instructions.
+* This screen greets the user at the start of the game and offers the option to view the instructions.
 
 ![Game Start](images/welcome.png)
 
 ### Difficulty Screen
 
-* This screen appears after the user as read the instructions or if they decline the instructions it will also take them here.
+* This screen appears after the user has read the instructions or declined to view them.
 
 ![Game Start](images/difficulty.png)
 
 ### instructions Screen
 
-* This screen appears at the beggining of the game, welcoming the user and giving the option to see the instructions.
+* At the start of the game, this screen welcomes the user and provides the option to view the instructions.
 
 ![Game Start](images/instructions.png)
 
 ### Start Game Screen
 
-* THis is the screen shown when the user starts the game.
+* This is the screen displayed when the user starts the game.
 
 ![Game Start](images/start-game-image.png)
 
 ### Correct guess
 
-* This is what is displayed when the user selects a correct answer
+* This is what appears when the user selects a correct answer.
 
 ![Correct guess](images/correct-answer.png)
 
 ### Incorrect guess
 
-* This is what is displayed when the user selects a incorrect answer.
+* This is what appears when the user selects an incorrect answer.
 
 ![Incorrect guess](images/incorrect-answer.png)
 
 ### Winning message
 
-* This is what is displayed when the user wins the game
+* This is what appears when the user wins the game.
 
 ![Winning Message](images/w-message.png)
 
 ### Losing message
 
-* This is what is displayed when the user wins the game
+* This is what appears when the user loses the game.
 
 ![Losing Message](images/l-message.png)
 
 ## Extra Features
 
-Once I had completed the basic game structure which was working I have then added in 3 difficultly levels, creating 3 new lists in words.py. I have also added in the stages of the hangman which changes based on user guess.
+Following the completion of the fundamental game structure, I expanded its functionality by introducing three difficulty levels through the creation of corresponding lists in words.py. Additionally, I integrated hangman stages that dynamically adjust based on the user's guesses. To enhance the user experience, I incorporated code to clear the terminal at strategic points throughout the game.
 
 ## Technologies Used
 
@@ -171,10 +171,7 @@ Once I had completed the basic game structure which was working I have then adde
 
 - I was given the following errors
 
-![Linter Errors](images/linter-one.png)
-![Linter Errors](images/linter-two.png)
-![Linter Errors](images/linter-three.png)
-![Linter Errors](images/linter-four.png)
+![Linter Errors](images/linter.png)
 
 - E302 expected 2 blank lines, found 1
     - To fix this I added another line, giving it the required 2 blank lines
@@ -195,9 +192,7 @@ Once I had completed the basic game structure which was working I have then adde
 
 ### Manual Testing
 
-* Common Elements Testing
-
-    - General
+* Game Testing
 
     Feature | Outcome | Example | Pass/Fail
     --- | --- | --- | ---
@@ -260,29 +255,29 @@ Once I had completed the basic game structure which was working I have then adde
 ## Deployment
 
 
-There were many steps to deploying this project to Heroku:
+Deploying this project to Heroku involved several steps:
 
-1. If I had installed any packages in Gitpod, I would need to add them to a list of requirements.
+1. If I installed any packages in Gitpod, I would need to add them to a requirements list.
 
-    - To do this, I would type pip3 freeze > requirements.txt and hit enter. This updates the requirements.txt file.
+    - To accomplish this, I'd type pip3 freeze > requirements.txt and press enter. This action updates the requirements.txt file.
     - Then, I would commit and push this to GitHub.
-    - Heroku uses this list to install the dependencies into the application before running the project.
+    - Heroku utilizes this list to install the dependencies into the application prior to running the project.
     - However, I didn't require any packages.
-    - I went to my Heroku dashboard and clicked on 'create a new app'.
+    - I navigated to my Heroku dashboard and selected 'create a new app'.
 
-2. I chose a name for my app; each app must have a unique name. Since 'hangman' was already taken, I went with 'hangman-terminal-game'.
+2. I selected a name for my app; each app must have a unique name. Since 'hangman' was already taken, I opted for 'hangman-terminal-game'.
 
-3. I selected my region and clicked 'create app'.
+3. I chose my region and clicked 'create app'.
 
-4. I then navigated to the 'settings' tab at the top of the page.
+4. Next, I accessed the 'settings' tab located at the top of the page.
 
-6. Some apps include sensitive data in the Gitpod workspace that isn't in the GitHub repository because it has been deliberately protected in the .gitignore file. I had no data to protect but the below steps would be followed.
+6. Some apps contain sensitive data within the Gitpod workspace, which isn't present in the GitHub repository due to being intentionally protected in the .gitignore file. Although I had no data to protect, the following steps would typically be followed.
 
     - To do this, I would click 'reveal config vars'.
     - Fill in the key, for example: CREDS.
     - Then, I would copy and paste the contents of the 'CREDS' file into the value field and click 'add'.
 
-7. I added the necessary buildpacks by clicking on the buildpack button.
+7. I included the required buildpacks by selecting the buildpack button.
 
     - I selected 'python' and pressed 'save changes'.
     - Then, I repeated the process, selecting 'nodejs' this time.
@@ -313,13 +308,13 @@ Go back to [Table of contents](#table-of-contents)
 
 ### Content
 
-- I have watched through multiple walkthrough videos while building this game. [Kite](https://www.youtube.com/@KiteHQ) Account was used in this process
+- Throughout the development process of this game, I extensively utilized walkthrough videos as valuable resources. These videos, sourced from various creators, provided invaluable insights and guidance, enabling me to grasp essential concepts and tackle challenges effectively. Specifically, I frequently referred to tutorials hosted by [Kite](https://www.youtube.com/@KiteHQ) on their YouTube channel. Their detailed explanations and demonstrations significantly contributed to my understanding and proficiency in game development. I proceeded to enhance the program by incorporating additional features such as a difficulty selection option and displaying the guessed letters.
 
 [Back to top ⇧](#table-of-contents)
 
 ## Acknowledgements
 
-- Marcel was a great help guiding me through the process helping me focus and point me in the right direction.
-- I would also like to thank my partnet who has been patient with me while I have studied and through the building of this project
+- Marcel provided invaluable guidance throughout the process, helping me maintain focus and steering me in the right direction.
+- I'd also like to express my gratitude to my partner, who has shown remarkable patience as I've studied and worked on this project.
 
 [Back to top ⇧](#table-of-contents)
