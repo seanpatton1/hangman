@@ -299,7 +299,7 @@ Deploying this project to Heroku involved several steps:
 11. Then, I scrolled down, where there were two options:
 
     - The first option is to enable automatic deployment, meaning Heroku will rebuild the app every time I push a change to GitHub.
-    - The second option is to manually deploy, which I chose for this project at the beggining and after used automatic deploys.
+    - The second option is to manually deploy, which I chose for this project at the beginning and after used automatic deploys.
 
 12. Once all the code is received from GitHub, there is a 'view' button that links to the running app. I clicked this to ensure everything was running as expected.
 
@@ -321,7 +321,7 @@ Go back to [Table of contents](#table-of-contents)
 
 ## Acknowledgements
 
-- Marcel provided invaluable guidance throughout the process, helping me maintain focus and steering me in the right direction.
+- Marcel, my mentor, provided invaluable guidance throughout the process, helping me maintain focus and steering me in the right direction.
 - I'd also like to express my gratitude to my partner, who has shown remarkable patience as I've studied and worked on this project.
 
 [Back to top ⇧](#table-of-contents)
