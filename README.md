@@ -164,6 +164,8 @@ Once I had completed the basic game structure which was working I have then adde
 
 ## Testing
 
+### Validator errors
+
 ### Python
 
 - I have used CI Python Linter[Python Linter](https://pep8ci.herokuapp.com/)
@@ -196,34 +198,104 @@ Once I had completed the basic game structure which was working I have then adde
     Welcome message | When the game loads - Welcome message appears  and message asking user if they want to read instructions | ![Welcome Message](images/test-one.png) | Pass - Game screen loads as expected
     Optional instructions | Give user the option to see instructions by pressing either Y or N - pressing Y shows the user the instructions| ![instructions](images/test-two.png) | Pass - User sees instructions
     Optional instructions | Give user the option to see instructions by pressing either Y or N - pressing N takes the user to the difficulty selection screen | ![Difficulty Section](images/test-three.png) | Pass - User is taken to next screen, bypassing instructions.
-    User selects letter, fills in guessed letters | User enters letter - guessed letter is added to guessed letters list | ![Difficulty Section](images/test-four.png) ![Difficulty Section](images/test-five.png) | Pass - Letter added
-    Confirmation message of correct letter | Message appears confirming the correct user guess | ![Difficulty Section](images/test-six.png) | Pass - Message appears
-    Confirmation message of incorrect letter | Message appears confirming the incorrect user guess | ![Difficulty Section](images/test-seven.png) | Pass - Message appears
-    Already guessed | user selects a letter already chosen - error message appears | ![Difficulty Section](images/test-eight.png) ![Difficulty Section](images/test-nine.png) | Pass - Message appears
-    User enters full word | User attempts to guess the word - relevant message appears if correct or incorrect | Example pic to be entered | Pass - Message appears
-    Invalid entry | User enters incorrect character - correct error message appears | Example pic to be entered | Pass - Message appears
-    Empty data entry | User clicks enter or space and enter - message appears telling user of invalid entry | Example pic to be entered | Pass - Message appears
+    User selects letter, fills in guessed letters | User enters letter - guessed letter is added to guessed letters list | ![Guessed Letters One](images/test-four.png) ![Guessed Letters Two](images/test-five.png) | Pass - Letter added
+    Confirmation message of correct letter | Message appears confirming the correct user guess | ![Correct Guess](images/test-six.png) | Pass - Message appears
+    Confirmation message of incorrect letter | Message appears confirming the incorrect user guess | ![Incorrect Guess](images/test-seven.png) | Pass - Message appears
+    Already guessed | user selects a letter already chosen - error message appears | ![Already Selected One](images/test-eight.png) ![Already Selected Two](images/test-nine.png) | Pass - Message appears
+    User enters full word | User attempts to guess the word - relevant message appears if correct or incorrect | ![Guess Full Word One](images/test-ten.png) ![Guess Full Word Two](images/test-twelve.png) ![Guess Full Word Three](images/test-eleven.png) | Pass - Message appears
+    Invalid entry | User enters incorrect character - correct error message appears | ![Invalid Character](images/test-thirteen.png) | Pass - Message appears
+    Empty data entry | User clicks enter or space and enter - message appears telling user of invalid entry | ![Invalid Character Two](images/test-fourteen.png) | Pass - Message appears
 
 
 [Back to top ⇧](#table-of-contents)
-
-### Validator errors
-
-
 
 ## Finished Product
 
 ### Game Page
 
-![finished product]()
+* Landing Page
+
+![Landing Page](images/landing-page.png)
+
+* Instructions Page
+
+![Instruction Page](images/intructions-page.png)
+
+* Difficulty Page
+
+![Difficulty Page](images/dif-selection-page.png)
+
+* Game Start Page
+
+![Game Start Page](images/game-start-page.png)
+
+* Correct Guess
+
+![Correct Guess](images/correct-guess.png)
+
+* Incorrect Guess
+
+![Incorrect Guess](images/incorrect-guess.png)
+
+* Game Won
+
+![Game Won](images/game-won.png)
+
+* Game Lost
+
+![Game Lost](images/game-lost.png)
+
+* Play Again(No)
+
+![Play Again(No)](images/play-again-no.png)
 
 
 
 ## Deployment
 
-* This website was developed using [GitPod](https://www.gitpod.io/), which was then committed and pushed to GitHub using the GitPod terminal.
 
-Put more on deployment in here
+There were many steps to deploying this project to Heroku:
+
+1. If I had installed any packages in Gitpod, I would need to add them to a list of requirements.
+
+    - To do this, I would type pip3 freeze > requirements.txt and hit enter. This updates the requirements.txt file.
+    - Then, I would commit and push this to GitHub.
+    - Heroku uses this list to install the dependencies into the application before running the project.
+    - However, I didn't require any packages.
+    - I went to my Heroku dashboard and clicked on 'create a new app'.
+
+2. I chose a name for my app; each app must have a unique name. Since 'hangman' was already taken, I went with 'hangman-terminal-game'.
+
+3. I selected my region and clicked 'create app'.
+
+4. I then navigated to the 'settings' tab at the top of the page.
+
+6. Some apps include sensitive data in the Gitpod workspace that isn't in the GitHub repository because it has been deliberately protected in the .gitignore file. I had no data to protect but the below steps would be followed.
+
+    - To do this, I would click 'reveal config vars'.
+    - Fill in the key, for example: CREDS.
+    - Then, I would copy and paste the contents of the 'CREDS' file into the value field and click 'add'.
+
+7. I added the necessary buildpacks by clicking on the buildpack button.
+
+    - I selected 'python' and pressed 'save changes'.
+    - Then, I repeated the process, selecting 'nodejs' this time.
+    - I ensured it was done in that order, with 'python' at the top and 'nodejs' below.
+
+8. I scrolled back up to the tab at the top and clicked 'deploy'.
+
+9. I selected 'GitHub' as the deployment method and clicked 'connect to GitHub'.
+
+10. After selecting this, I searched for my GitHub repository name and connected to the correct repository.
+
+11. Then, I scrolled down, where there were two options:
+
+    - The first option is to enable automatic deployment, meaning Heroku will rebuild the app every time I push a change to GitHub.
+    - The second option is to manually deploy, which I chose for this project at the beggining and after used automatic deploys.
+
+12. Once all the code is received from GitHub, there is a 'view' button that links to the running app. I clicked this to ensure everything was running as expected.
+
+Go back to [Table of contents](#table-of-contents)
 
 ## Credits 
 
