@@ -15,7 +15,7 @@ Visit the deployed game [here](https://hangman-terminal-game-84634e4afa2f.heroku
 1. [User Experience (UX)](#user-experience-ux)
     1. [Project Layout diagram](#project-goals)
     2. [Project Goals](#project-goals)
-    3. [Implementation](#implentation)
+    3. [Implementation](#Implementation)
     3. [Color Scheme](#color-scheme)
 2. [Features](#features)
     1. [Game Start](#game-start)
